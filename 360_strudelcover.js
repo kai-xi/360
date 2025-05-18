@@ -225,4 +225,12 @@ arrange(
   )],
   [8, stack(section_5, remix_vox.mask("<1 1 1 0 1 1 1 1>"))],
   [4, vox_chop_1.delay(.25).delayt(.5).dfb(.2).mask("<1 0 0 0>")]
-).cpm(cpm);
+)
+  .cpm(cpm)
+  .theme("<[greenText whitescreen] [blackscreen whitescreen]>/2")
+  .color("<[#99CC3E #FFFFFF] [#99CC3E #000000]>")
+  .fontFamily("x3270")
+  .punchcard({
+    fold: 1, vertical: 1, flipValues: 1, flipTime: 1, stroke: 1,
+    playheadColor: 'rgba(0, 0, 0, 0)'
+  });
