@@ -1,7 +1,7 @@
 /*
   @title Charli xcx - 360 (cover / remix)
   @by KAIXI
-  @details Brat and  it's  the same  but 
+  @details Brat  and it's  the same  but 
            we're live coding so it's not
 */
 
@@ -12,7 +12,7 @@ samples({
   vox: '360_vocals.wav'
 }, 'https://raw.githubusercontent.com/kai-xi/360/main/samples/');
 
-// section 1
+// section 1: intro
 let lead_synth = arrange(
   [3, "<[[e3,b3] - c4 -] [e3 - f3 c4] [- c4 a4 -] [- - - -]>*4"],
   [1, "<[- - [g3,b3] -] [g3 - a3 c4] [- c4 c5 -] [c4 - g4 -]>*4"]
@@ -24,7 +24,7 @@ let lead_synth = arrange(
 
 let section_1 = lead_synth;
 
-// section 2
+// section 2: i went my own way and i made it
 let bass = arrange(
   [2, "<[e2 -] [- - e2 f2] [- f1] [-]>*4"],
   [1, "<[- e2] [e2 - e2 f2] [- f1] [-]>*4"],
@@ -52,7 +52,7 @@ let drums = stack(bass_drum, clap);
  
 let section_2 = stack(lead_synth, bass, sub_bass, drums);
 
-// section 3
+// section 3: drop down, yeah
 let lead_saw = arrange(
   [4, "<[g4 - g4 g4] [g4 g4@2 g4] [g4 g4 g4@2] [g4@2 g4 g4]>*4"]
 )
@@ -71,7 +71,7 @@ let section_3 = stack(
   camera_flash
 );
 
-// section 4
+// section 4: yeah, 360
 let section_4 = stack(
   lead_synth, 
   bass.lpf("<20000 [20000 20000 20000 500]>/4"), 
@@ -79,7 +79,7 @@ let section_4 = stack(
   drums.mask("<1 [1 1 1 [1 0]]>/4")
 );
 
-// section 5
+// section 5: bumpin' that
 let bass_modified = arrange(
   [1, "<[e2 -] [- - e2 f2] [- f1] [-]>*4"],
   [1, "<[e2 -] [- - e2 f2] [- f1] [e2 e2 e2 -]>*4"],
@@ -109,7 +109,7 @@ let section_5 = stack(
   lead_saw.mask("<[1 1 1 [1 0]]>/4")
 );
 
-// arrangement
+// instrumental arrangement
 let instrumental = arrange(
   [4, section_1],
   [8, section_2],
@@ -124,9 +124,11 @@ let vocals = s("vox")
          "<0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31>")
   .cpm(cpm);
 
+// cover (1st half of the song)
 let cover = stack(instrumental, vocals);
 
-// WORKING IT OUT ON THE REMIX
+// WORKING IT OUT ON THE REMIX !!!
+// extending section 5
 let section_5_ext = stack(
   lead_synth, 
   bass,
@@ -136,7 +138,7 @@ let section_5_ext = stack(
   lead_saw.mask("<1 [1 1 1 [1 0]]>/4")
 );
 
-// bumping that
+// bumpin' that
 let vox_chop_1 = s("vox").slice(32, "<30 30 30 30>");
 // ah-ah ah-ah-ah
 let vox_chop_2 = 
