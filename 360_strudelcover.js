@@ -200,7 +200,7 @@ let section_8 = stack(
 );
 
 // section 9
-let section_9 = stack(section_5, hihats.mask("<1 [1 1 1 [1 0]]>/4"));
+let section_9 = stack(section_5, hihats.gain(.8).mask("<1 [1 1 1 [1 0]]>/4"));
 
 // down
 let vox_chop_4 = s("vox").slice(32 * 4, "<- 50 - 50 - 50 - 50>*4");
