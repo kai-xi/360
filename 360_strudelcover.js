@@ -231,6 +231,6 @@ arrange(
   .color("<[#99CC3E #FFFFFF] [#99CC3E #000000]>")
   .fontFamily("x3270")
   .punchcard({
-    fold: 1, vertical: 1, flipValues: 1, flipTime: 1, stroke: 1,
+    vertical: 1, flipTime: 1, fold: 0, stroke: 1,
     playheadColor: 'rgba(0, 0, 0, 0)'
   });
