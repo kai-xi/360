@@ -207,7 +207,7 @@ let vox_chop_4 = s("vox").slice(32 * 4, "<- 50 - 50 - 50 - 50>*4");
 // bumping that beat
 let vox_chop_5 = s("<- - - - vox@2 vox@2>*4").begin(99 / (32 * 4)).end(0.7852)
   .delay(.2).delaytime(.25).delayfeedback(.1);
-// i'm everwhere, i'm so julia
+// i'm everywhere, i'm so julia
 let vox_chop_6 = s("vox").slice(32 * 4, "<- - - - 89 90 91 92>*4").gain(.8);
 
 arrange(
